@@ -1,6 +1,12 @@
 <template>
   <div class="plat">
-    plat
+    <div class='tabs'>
+    	<div class='smallTab'>全部设备数</div>
+    </div>
+    <div class='listMap'>
+    	<div class='DeviceList'>List</div>
+    	<div class='DeviceMap'>Map</div>
+    </div>
   </div>
 </template>
 
