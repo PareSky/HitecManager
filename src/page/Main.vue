@@ -12,14 +12,14 @@
     </el-header>
 
   <el-container>
-    <el-aside style='width:210px'>
+    <el-aside style='width:210px;background-color:#eee;'>
     
 <el-menu
       default-active="2"
-      class="el-menu-vertical-demo"
+      class="el-menu-vertical-demo allheight"
       @open="handleOpen"
       @close="handleClose"
-      background-color="#545c64"
+      background-color="rgb(67, 75, 91)"
       text-color="#fff"
       active-text-color="#ffd04b">
       <el-menu-item index="1">
@@ -41,11 +41,14 @@
     </el-menu>
 
     </el-aside>
-    <el-main>
-        main
-
-        <router-view/>
-    </el-main>
+    <el-container>
+      <el-main>
+          <router-view/>
+      </el-main>
+      <el-footer>
+        Copyright © 2016 IDMS. All rights reserved.
+      </el-footer>
+    </el-container>
   </el-container>
     </el-container>
   </div>
@@ -97,6 +100,9 @@ export default {
 }
 .logout1{
   margin-right: 60px;
+}
+.allheight{
+  height:calc(100vh - 100px);
 }
 .main{
 

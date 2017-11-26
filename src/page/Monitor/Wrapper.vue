@@ -1,6 +1,5 @@
 <template>
   <div class="plat">
-    Wrapper
     <router-view/>
   </div>
 </template>
