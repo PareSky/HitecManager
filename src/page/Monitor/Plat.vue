@@ -238,9 +238,11 @@ export default {
 	background: #FFFFFF;
 	box-shadow: 0 0 6px 0 rgba(0,0,0,0.32);
 	border-radius: 6px;
+	display: flex;
+	flex-direction:column;
 }
 #MapContainer{
-	height: calc(100% - 51px)
+	flex:1;
 }
 .tb_colrmn_left  {
 	text-align: left;
