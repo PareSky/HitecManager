@@ -15,28 +15,27 @@
     <el-aside style='width:210px;background-color:#eee;'>
     
 <el-menu
-      default-active="2"
       class="el-menu-vertical-demo allheight"
       @open="handleOpen"
       @close="handleClose"
       background-color="rgb(67, 75, 91)"
-      text-color="#fff"
-      active-text-color="#ffd04b">
+      text-color="#979797"
+      active-text-color="#fff">
       <el-menu-item index="1">
-        <i class="el-icon-menu"></i>
-        <span slot="title">设备监控台</span>
+      <img class='Micon' src='/src/assets/IconMedium/Micon1.png'></img>
+        <span slot="title" class='menuName'>设备监控台</span>
       </el-menu-item>
       <el-menu-item index="2">
-        <i class="el-icon-setting"></i>
-        <span slot="title">设备管理</span>
+      <img class='Micon' src='/src/assets/IconMedium/Micon2.png'></img>
+        <span slot="title" class='menuName'>设备管理</span>
       </el-menu-item>
-      <el-menu-item index="2">
-        <i class="el-icon-setting"></i>
-        <span slot="title">数据管理</span>
+      <el-menu-item index="3">
+      <img class='Micon' src='/src/assets/IconMedium/Micon3.png'></img>
+        <span slot="title" class='menuName'>数据管理</span>
       </el-menu-item>
-      <el-menu-item index="2">
-        <i class="el-icon-setting"></i>
-        <span slot="title">系统管理</span>
+      <el-menu-item index="4">
+      <img class='Micon' src='/src/assets/IconMedium/Micon4.png'></img>
+        <span slot="title" class='menuName'>系统管理</span>
       </el-menu-item>
     </el-menu>
 
@@ -112,5 +111,9 @@ export default {
 }
 .content{
 
+}
+.menuName{
+  font-size: 18px;
+  margin-left: 10px
 }
 </style>
