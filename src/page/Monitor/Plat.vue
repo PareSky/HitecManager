@@ -35,6 +35,7 @@
     	<el-table
 	      :data="tableData"
 	      style="width: 100%;text-align: left;"
+	      height='300'
 	      :show-header=false>
 	      <el-table-column
 	        prop="name"
@@ -81,6 +82,17 @@ export default {
       	{name:'武汉2号机',state:'故障',position:[121.733069,31.319376],icon:1,color:'color_link'},
       	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2,color:'color_stop'},
       	{name:'武汉2号机',state:'正常',position:[121.933089,31.219389],icon:4,color:'color_nomal'},
+      	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2,color:'color_stop'},
+      	{name:'武汉2号机',state:'正常',position:[121.933089,31.219389],icon:4,color:'color_nomal'},
+      	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2,color:'color_stop'},
+      	{name:'武汉2号机',state:'正常',position:[121.933089,31.219389],icon:4,color:'color_nomal'},
+      	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2,color:'color_stop'},
+      	{name:'武汉2号机',state:'正常',position:[121.933089,31.219389],icon:4,color:'color_nomal'},
+      	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2,color:'color_stop'},
+      	{name:'武汉2号机',state:'正常',position:[121.933089,31.219389],icon:4,color:'color_nomal'},
+      	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2,color:'color_stop'},
+      	{name:'武汉2号机',state:'正常',position:[121.933089,31.219389],icon:4,color:'color_nomal'},
+      	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2,color:'color_stop'},
       ],
       icons:[icon_1,icon_2,icon_3,icon_4],
       markers:[],
@@ -106,10 +118,8 @@ export default {
 					this.markers.push(marker);
 					AMap.event.addListener(marker, 'click', this._onClick);
 				}
-				console.log(this.markers)
       },
      	_onClick : function(e){
-	   		console.log('_onClick')
 	   		var ct = e.target.content;
 	   		var title= ct.name;
 		    var info = [];
@@ -208,6 +218,8 @@ export default {
 	background: #FFFFFF;
 	box-shadow: 0 0 6px 0 rgba(0,0,0,0.32);
 	border-radius: 6px;
+    display: flex;
+    flex-direction: column;
 }
 .listtitle{
 	border-bottom: 1px solid blue;
