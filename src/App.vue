@@ -22,6 +22,12 @@ export default {
   padding:0;
   margin: 0;
 }
+@font-face {
+    font-family: 'DINCondensed-Bold';
+    src: url('/src/assets/fonts/DINCondensedC.otf');
+    font-weight: normal;
+    font-style: normal;
+}
 body{ height:100%}
 html{ height:100%}
 </style>

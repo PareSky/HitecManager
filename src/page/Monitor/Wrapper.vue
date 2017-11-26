@@ -1,12 +1,12 @@
 <template>
-  <div class="plat">
+  <div class="Wrapper">
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'plat',
+  name: 'wrapper',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -17,4 +17,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.Wrapper{
+    display: flex;
+    height: 100%;
+}
 </style>

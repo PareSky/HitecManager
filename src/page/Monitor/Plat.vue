@@ -13,7 +13,7 @@
     	<span class='tai'>台</span>
     	</div>
     	<div class='smallTab' style='background: #F4A018;'>
-    	<span class='stext'>运转正常数</span>
+    	<span class='stext'>运转异常数</span>
     	<span class='snum'>0899</span>
     	<span class='tai'>台</span>
     	</div>
@@ -34,16 +34,22 @@
     	<div class='listtitle'>设备列表</div>
     	<el-table
 	      :data="tableData"
-	      style="width: 100%"
+	      style="width: 100%;text-align: left;"
 	      :show-header=false>
 	      <el-table-column
 	        prop="name"
 	        width="290px"
 	        >
+	        <template slot-scope="scope">
+		        <span style="margin-left: 10px">{{ scope.row.name }}</span>
+		      </template>
 	      </el-table-column>
 	      <el-table-column
 	        prop="state"
 	        width="80px">
+	        <template slot-scope="scope">
+		        <span v-bind:class='scope.row.color'>{{ scope.row.state }}</span>
+		      </template>
 	      </el-table-column>
 	    </el-table>
     	</div>
@@ -70,11 +76,11 @@ export default {
   data () {
     return {
       tableData: [
-      	{name:'武汉2号机',state:'正常',position:[121.533067,31.219374],icon:4},
-      	{name:'武汉2号机',state:'异常',position:[121.631946,31.211154],icon:3},
-      	{name:'武汉2号机',state:'故障',position:[121.733069,31.319376],icon:1},
-      	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2},
-      	{name:'武汉2号机',state:'正常',position:[121.933089,31.219389],icon:4},
+      	{name:'武汉2号机',state:'正常',position:[121.533067,31.219374],icon:4,color:'color_nomal'},
+      	{name:'武汉2号机',state:'异常',position:[121.631946,31.211154],icon:3,color:'color_error'},
+      	{name:'武汉2号机',state:'故障',position:[121.733069,31.319376],icon:1,color:'color_link'},
+      	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2,color:'color_stop'},
+      	{name:'武汉2号机',state:'正常',position:[121.933089,31.219389],icon:4,color:'color_nomal'},
       ],
       icons:[icon_1,icon_2,icon_3,icon_4],
       markers:[],
@@ -123,7 +129,7 @@ export default {
 						color: #107FE0;
 						letter-spacing: 0;'>${ct.name}</span><br>
 						编号：23894384<br>
-						状态：<span style='color:green'>${ct.state}</span><br>
+						状态：<span style='color:#7ED321'>${ct.state}</span><br>
 						位置：苏州市吴中区吴中大道 189号
 						</div>
 		   `;
@@ -142,6 +148,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.plat{
+    display: flex;
+    flex-direction: column;
+}
 .tabs{
 	display: flex;
 	flex-wrap: wrap
@@ -189,6 +199,7 @@ export default {
 }
 .listMap{
 	display: flex;
+	flex:1;
 	margin-left: 20px;
 	margin-top: 20px;
 }
@@ -217,6 +228,21 @@ export default {
 	border-radius: 6px;
 }
 #MapContainer{
-	height: 300px;
+	height: calc(100% - 51px)
+}
+.tb_colrmn_left  {
+	text-align: left;
+}
+.color_nomal{
+	color:#7ED321;
+}
+.color_error{
+	color:#F4A018;
+}
+.color_link{
+	color:#DE6D16;
+}
+.color_stop{
+	color:#D8270F;
 }
 </style>
