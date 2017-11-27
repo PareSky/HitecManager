@@ -43,6 +43,46 @@
 		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
 		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
 		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
+		  	<div class='item'>
+		  		<div class='oval'><img src='/src/assets/IconMedium/Oval2.png'></div>
+		  		<div class='inforBox '>第1次数据 (2017-10-11 19:43:31)</div>
+		  	</div>
 		  </div></el-col>
 	  <el-col :span="10"><div class="details">
   		<el-row class='head'>
@@ -108,7 +148,6 @@ export default {
 .details{
 	text-align: left;
 	line-height: 54px;
-	overflow: scroll;
 }
 .head{
 	background-color: #E6E6E6;
@@ -156,4 +195,6 @@ export default {
 	height: calc(100vh - 340px);
 	overflow: scroll;
 }
+.bodyWrapper::-webkit-scrollbar {display:none}
+.dataflow::-webkit-scrollbar {display:none}
 </style>
