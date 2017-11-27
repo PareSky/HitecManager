@@ -46,8 +46,7 @@
 		      </template>
 	      </el-table-column>
 	      <el-table-column
-	        prop="state"
-	        width="80px">
+	        prop="state">
 	        <template slot-scope="scope">
 		        <span v-bind:class='scope.row.color'>{{ scope.row.state }}</span>
 		      </template>

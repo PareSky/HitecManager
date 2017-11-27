@@ -1,5 +1,5 @@
 <template>
-  <div class="plat">
+  <div class="main">
   <el-container>
   <el-header class='header' style="height: 100px;">
     <img class='logo' src='/src/assets/logo.png'></img>
@@ -44,7 +44,7 @@
       <el-main>
           <router-view/>
       </el-main>
-      <el-footer>
+      <el-footer style='line-height: 60px;'>
         Copyright © 2016 IDMS. All rights reserved.
       </el-footer>
     </el-container>
@@ -55,7 +55,7 @@
 
 <script>
 export default {
-  name: 'plat',
+  name: 'main',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -74,7 +74,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.plat{
+.main{
 }
 .header{
   background-color: #fff;
