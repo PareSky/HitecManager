@@ -86,7 +86,6 @@ export default {
   float:left;
 }
 .fr{
-  float:right;
   display: flex;
   align-items:center;
 }

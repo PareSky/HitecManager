@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import Login from '@/page/Login'
 import Main from '@/page/Main'
 import Wrapper from '@/page/Monitor/Wrapper'
 import Plat from '@/page/Monitor/Plat'
@@ -40,6 +41,7 @@ export default new Router({
     		{name:'Data',path:'data',component:Data},
     		{name:'System',path:'system',component:System}
     	]
-    }
+    },
+    {name:'Login',path:'/login',component:Login}
   ]
 })
