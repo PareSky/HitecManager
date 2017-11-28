@@ -44,7 +44,7 @@
       <el-main>
           <router-view/>
       </el-main>
-      <el-footer style='line-height: 60px;'>
+      <el-footer style='line-height: 40px; height:40px;'>
         Copyright © 2016 IDMS. All rights reserved.
       </el-footer>
     </el-container>

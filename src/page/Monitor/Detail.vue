@@ -4,6 +4,7 @@
     	<div class='tabmenu'>
     		<div class='menuItem active'>报警</div>
     		<div class='menuItem'>数据表</div>
+    		<div class='menuItem'>数据图</div>
     		<div class='menuItem'>位置</div>
     		<div class='menuItem'>实时</div>
     		<div class='menuItem refresh'>刷新</div>
@@ -30,7 +31,7 @@ export default {
 	background: #FFFFFF;
 	box-shadow: 0 0 6px 0 rgba(0,0,0,0.32);
 	border-radius: 6px;
-	height: calc(100vh - 200px);
+	height: calc(100vh - 180px);
 	width: 100%;
 	display: flex;
 	flex-direction: column;
