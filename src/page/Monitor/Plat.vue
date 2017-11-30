@@ -71,7 +71,15 @@ var map
 export default {
   name: 'plat',
 	mounted: function () {
-	  this.init()
+		// 创建高德地图
+		this.createMap().then( ()=> {
+		  console.log('读取高德地图成功')
+		  // 加載當前的ip定位
+			  this.init()
+		}).catch(function (error) {
+		  // 处理 getJSON 和 前一个回调函数运行时发生的错误
+		  console.log('发生错误！', error)
+		})
 	},
   data () {
     return {
@@ -88,6 +96,20 @@ export default {
     }
   },
   methods: {
+  	createMap:function (){
+		  const promise = new Promise(function (resolve, reject) {
+		    let script = document.createElement('script')
+		    script.type = 'text/javascript'
+		    script.src = 'http://webapi.amap.com/maps?v=1.4.0&key=774b53830a7310b9a8ee707d0aab4be5'   // 高德地图
+		    document.body.appendChild(script)
+		    if (script.nodeName === 'SCRIPT') {
+		      resolve()
+		    } else {
+		      reject(new Error('Could not script image at ' + script.src))
+		    }
+		  })
+		  return promise
+		},
       init: function () {
         this.map = new AMap.Map('MapContainer',{
             resizeEnable: true,

@@ -22,15 +22,20 @@
 	    <img src='/src/assets/IconMedium/download.png'>
 	    <span class='text2 mr30'>下载图表</span>
 	</div>
-    <div class='chart'>
-      <img src='/src/assets/image/chart.jpeg'/>
+    <div class='chart' id='ChartWrapper'>
+      <!-- <img src='/src/assets/image/chart.jpeg'/> -->
+      <hitec-charts />
     </div>
   </div>
 </template>
 
 <script>
+import HitecCharts from '@/components/HitecCharts'
 export default {
   name: 'dataMap',
+  components:{
+  	HitecCharts
+  },
   data () {
     return {
       value1:'',
@@ -66,9 +71,9 @@ export default {
 .pl10{
 	padding-left: 10px;
 }
-.chart img{
+.chart{
 	width: 800px;
-	height: 250px;
+	height: 500px;
 	padding-left: 10px;
 }
 .text1{

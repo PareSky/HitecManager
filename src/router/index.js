@@ -19,8 +19,10 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+
+    {name:'default',path:'/',redirect:'/main/monitor/plat'},
     {
-    	path: '/',
+    	path: '/main',
     	name: 'Main',
     	component: Main,
     	children: [

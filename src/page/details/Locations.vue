@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import AMap from 'AMap'
 import icon_1 from '@/assets/IconMedium/icon_car1.png'
 import icon_2 from '@/assets/IconMedium/icon_car2.png'
 import icon_3 from '@/assets/IconMedium/icon_car3.png'
@@ -13,12 +14,24 @@ var map
 export default {
   name: 'plat',
 	mounted: function () {
-	  this.init()
+		// 创建高德地图
+		this.createMap().then( ()=> {
+		  console.log('读取高德地图成功')
+		  // 加載當前的ip定位
+			  this.init()
+		}).catch(function (error) {
+		  // 处理 getJSON 和 前一个回调函数运行时发生的错误
+		  console.log('发生错误！', error)
+		})
 	},
   data () {
     return {
       tableData: [
-      	{name:'武汉2号机',state:'正常',position:[121.533067,31.219374],icon:4,color:'color_nomal'}
+      	{name:'武汉2号机',state:'正常',position:[121.533067,31.219374],icon:4,color:'color_nomal'},
+      	{name:'武汉2号机',state:'异常',position:[121.631946,31.211154],icon:3,color:'color_error'},
+      	{name:'武汉2号机',state:'故障',position:[121.733069,31.319376],icon:1,color:'color_link'},
+      	{name:'武汉2号机',state:'停机',position:[121.833088,31.219388],icon:2,color:'color_stop'},
+      	{name:'武汉2号机',state:'正常',position:[121.933089,31.219389],icon:4,color:'color_nomal'},
       ],
       icons:[icon_1,icon_2,icon_3,icon_4],
       markers:[],
@@ -26,6 +39,20 @@ export default {
     }
   },
   methods: {
+  	createMap:function (){
+		  const promise = new Promise(function (resolve, reject) {
+		    let script = document.createElement('script')
+		    script.type = 'text/javascript'
+		    script.src = 'http://webapi.amap.com/maps?v=1.4.0&key=774b53830a7310b9a8ee707d0aab4be5'   // 高德地图
+		    document.body.appendChild(script)
+		    if (script.nodeName === 'SCRIPT') {
+		      resolve()
+		    } else {
+		      reject(new Error('Could not script image at ' + script.src))
+		    }
+		  })
+		  return promise
+		},
       init: function () {
         this.map = new AMap.Map('MapContainer',{
             resizeEnable: true,
@@ -46,6 +73,7 @@ export default {
 				}
       },
      	_onClick : function(e){
+     		console.log('_onClick');
 	   		var ct = e.target.content;
 	   		var title= ct.name;
 		    var info = [];

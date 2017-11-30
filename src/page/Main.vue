@@ -23,19 +23,23 @@
       active-text-color="#fff">
       <el-menu-item index="1">
       <img class='Micon' src='/src/assets/IconMedium/Micon1.png'></img>
-        <span slot="title" class='menuName'>设备监控台</span>
+        <span slot="title" class='menuName'>
+        <router-link to="/main/monitor/plat">设备监控台</router-link></span>
       </el-menu-item>
       <el-menu-item index="2">
       <img class='Micon' src='/src/assets/IconMedium/Micon2.png'></img>
-        <span slot="title" class='menuName'>设备管理</span>
+        <span slot="title" class='menuName'>
+        <router-link to="/main/monitor/detail/alerts">设备管理</router-link></span>
       </el-menu-item>
       <el-menu-item index="3">
       <img class='Micon' src='/src/assets/IconMedium/Micon3.png'></img>
-        <span slot="title" class='menuName'>数据管理</span>
+        <span slot="title" class='menuName'>
+        <router-link to="/main/data">数据管理</router-link></span>
       </el-menu-item>
       <el-menu-item index="4">
       <img class='Micon' src='/src/assets/IconMedium/Micon4.png'></img>
-        <span slot="title" class='menuName'>系统管理</span>
+        <span slot="title" class='menuName'>
+        <router-link to="/main/monitor/plat">系统管理</router-link></span>
       </el-menu-item>
     </el-menu>
 
@@ -114,5 +118,9 @@ export default {
 .menuName{
   font-size: 18px;
   margin-left: 10px
+}
+.menuName a{
+  text-decoration: none;
+  color: inherit;
 }
 </style>

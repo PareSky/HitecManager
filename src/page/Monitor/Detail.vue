@@ -2,12 +2,13 @@
   <div class="detail">
     	<div class='listtitle'>正昊木业2号机</div>
     	<div class='tabmenu'>
-    		<div class='menuItem active'>报警</div>
-    		<div class='menuItem'>数据表</div>
-    		<div class='menuItem'>数据图</div>
-    		<div class='menuItem'>位置</div>
-    		<div class='menuItem'>实时</div>
-    		<div class='menuItem refresh'>刷新</div>
+    		<el-button type="primary" class='menuItem active' @click='toAlert'>报警</el-button>
+    		<el-button class='menuItem'  @click='toDatas'>数据表</el-button>
+    		<el-button class='menuItem'  @click='toDataMap'>数据图</el-button>
+    		<el-button class='menuItem'  @click='toLocations'>位置</el-button>
+    		<el-button class='menuItem'  @click='toLiving'>实时</el-button>
+    		<el-button class='menuItem refresh' >刷新</el-button>
+    		
     	</div>
     	<router-view/>
   </div>
@@ -20,6 +21,23 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods:{
+  	toAlert:function(){
+  		this.$router.push('alerts')
+  	},
+  	toDatas:function(){
+  		this.$router.push('datas')
+  	},
+  	toDataMap:function(){
+  		this.$router.push('dataMap')
+  	},
+  	toLocations:function(){
+  		this.$router.push('locations')
+  	},
+  	toLiving:function(){
+  		this.$router.push('living')
+  	},
   }
 }
 </script>
@@ -52,13 +70,14 @@ export default {
 	display: flex;
 }
 .menuItem{
-	width:100px;
-	height:41px;
-	background: #E6E6E6;
-	border-radius: 4px;
-	line-height: 41px;
-	margin: 10px;
-	color: #9B9B9B;
+    width: 100px;
+    height: 41px;
+    background: #E6E6E6;
+    border-radius: 4px;
+    margin: 10px;
+    font-size: 18px;
+    border-color: #fff;
+    color: #9b9b9b;
 }
 .active{
 	background-color: #107FE0;
