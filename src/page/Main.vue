@@ -105,6 +105,7 @@ export default {
 }
 .allheight{
   height:calc(100vh - 100px);
+  text-align: left;
 }
 .main{
 
@@ -117,7 +118,7 @@ export default {
 }
 .menuName{
   font-size: 18px;
-  margin-left: 10px
+  margin-left: 10px;
 }
 .menuName a{
   text-decoration: none;
