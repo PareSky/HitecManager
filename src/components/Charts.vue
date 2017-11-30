@@ -6,7 +6,10 @@
 </template>
 
 <script>
-  import echarts from 'echarts'
+  import echarts from 'echarts/lib/echarts'
+  import line from 'echarts/lib/chart/line'
+  import tooltip from 'echarts/lib/component/tooltip'
+  import markLine from 'echarts/lib/component/markLine'
   export default {
     name: 'charts',
     data () {
@@ -23,8 +26,6 @@
                 trigger: 'axis',
                 backgroundColor: '#fff',
                 textStyle: '#667383'
-            },
-            title: {
             },
             xAxis: {
               name:'时间',
