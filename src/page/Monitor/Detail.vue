@@ -45,11 +45,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .detail{
-	/* Rectangle 7: */
 	background: #FFFFFF;
 	box-shadow: 0 0 6px 0 rgba(0,0,0,0.32);
 	border-radius: 6px;
-	height: calc(100vh - 180px);
+	/*height: calc(100vh - 180px);*/
 	width: 100%;
 	display: flex;
 	flex-direction: column;
