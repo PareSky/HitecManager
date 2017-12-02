@@ -2,11 +2,7 @@
   <div class="detail">
     	<div class='listtitle'>正昊木业2号机</div>
     	<div class='tabmenu'>
-    		<el-button type="primary" class='menuItem active' @click='toAlert'>报警</el-button>
-    		<el-button class='menuItem'  @click='toDatas'>数据表</el-button>
-    		<el-button class='menuItem'  @click='toDataMap'>数据图</el-button>
-    		<el-button class='menuItem'  @click='toLocations'>位置</el-button>
-    		<el-button class='menuItem'  @click='toLiving'>实时</el-button>
+    		<el-button type="primary" v-for="(item,index) in tabs" :class='{active:index == num,menuItem:true}'  @click='tab(index)'>{{item}}</el-button>
     		<el-button class='menuItem refresh' >刷新</el-button>
     		
     	</div>
@@ -19,24 +15,15 @@ export default {
   name: 'detail',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      tabs:['报警','数据表','数据图','位置','实时'],
+      num:1,
+      routes:['alerts','datas','dataMap','locations','living']
     }
   },
   methods:{
-  	toAlert:function(){
-  		this.$router.push('alerts')
-  	},
-  	toDatas:function(){
-  		this.$router.push('datas')
-  	},
-  	toDataMap:function(){
-  		this.$router.push('dataMap')
-  	},
-  	toLocations:function(){
-  		this.$router.push('locations')
-  	},
-  	toLiving:function(){
-  		this.$router.push('living')
+  	tab: function(index){
+  		this.num = index;
+  		this.$router.push(this.routes[index]);
   	},
   }
 }

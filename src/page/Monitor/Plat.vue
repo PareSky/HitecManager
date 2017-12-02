@@ -152,6 +152,14 @@ export default {
 						状态：<span style='color:#7ED321'>${ct.state}</span><br>
 						位置：苏州市吴中区吴中大道 189号
 						</div>
+			<div style='
+				margin: 0 auto;
+			    width: 0;
+			    height: 0;
+			    border-width: 10px 10px 0;
+			    border-style: solid;
+			    border-color: #fff transparent transparent;'>
+			    </div>
 		   `;
 
 		   var infoWindow = new AMap.InfoWindow({
